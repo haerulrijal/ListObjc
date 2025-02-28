@@ -12,8 +12,5 @@
 + (instancetype)sharedManager;
 - (void)sendGETRequestWithURL:(NSString *)urlString
                    completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completion;
-- (void)sendPOSTRequestWithURL:(NSString *)urlString
-                     parameters:(NSDictionary *)parameters
-                     completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completion;
 
 @end
