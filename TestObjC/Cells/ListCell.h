@@ -6,10 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Post.h"
+@class Post;
 
 @interface ListCell: UITableViewCell
 
--(instancetype)bindModel:(Post *) post;
+-(void)bindModel:(Post *)post;
 
 @end

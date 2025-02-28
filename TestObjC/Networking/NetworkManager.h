@@ -5,8 +5,15 @@
 //  Created by Ulat Bulu on 28/02/25.
 //
 
-#ifndef NetworkManager_h
-#define NetworkManager_h
+#import <Foundation/Foundation.h>
 
+@interface NetworkManager : NSObject
 
-#endif /* NetworkManager_h */
++ (instancetype)sharedManager;
+- (void)sendGETRequestWithURL:(NSString *)urlString
+                   completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completion;
+- (void)sendPOSTRequestWithURL:(NSString *)urlString
+                     parameters:(NSDictionary *)parameters
+                     completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completion;
+
+@end

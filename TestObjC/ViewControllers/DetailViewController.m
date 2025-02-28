@@ -8,8 +8,11 @@
 #import <UIKit//UIKit.h>
 #import "DetailViewController.h"
 
+#import <UIKit//UIKit.h>
+#import "DetailViewController.h"
+
 @interface DetailViewController()
-@property ListCellModel *model;
+@property Post *post;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
@@ -19,17 +22,17 @@
 @implementation DetailViewController
 
 
-- (instancetype)initWithModel: (ListCellModel*) model {
+- (instancetype)initWithModel: (Post*) post {
     self = [super initWithNibName:@"DetailViewController" bundle:nil];
     if (self) {
-        self.model = model;
+        self.post = post;
     }
     return self;
 }
 
 - (void)viewDidLoad {
-    [_idLabel setText:self.model.itemId];
-    [_titleLabel setText:self.model.title];
+    [_idLabel setText:self.post.postId];
+    [_titleLabel setText:self.post.title];
 }
 
 @end

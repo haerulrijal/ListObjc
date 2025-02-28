@@ -9,7 +9,13 @@
 
 @interface Post: NSObject
 
-@property (strong) NSString * postId;
-@property (strong) NSString * title;
+@property (strong) NSString *postId;
+@property (strong) NSString *title;
+
+
+-(instancetype)initWithId:(NSString *) itemId title:(NSString *)title;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)toDictionary;
 
 @end
