@@ -8,6 +8,9 @@
 #import <UIKit//UIKit.h>
 #import "DetailViewController.h"
 
+#import <UIKit//UIKit.h>
+#import "DetailViewController.h"
+
 @interface DetailViewController()
 @property Post *post;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
