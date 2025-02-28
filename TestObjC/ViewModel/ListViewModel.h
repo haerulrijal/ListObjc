@@ -11,6 +11,9 @@
 
 @interface ListViewModel: NSObject
 
-@property (strong, nonatomic) NSMutableArray * posts;
+@property (strong, nonatomic) NSArray * posts;
+-(void)dummy;
+
+- (void)fetchDataWithCompletion:(void (^)(NSError *error))completion;
 
 @end

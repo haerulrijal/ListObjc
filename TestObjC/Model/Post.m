@@ -24,4 +24,18 @@
     return self;
 }
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        NSNumber *itemID = dictionary[@"id"];
+        _postId = itemID.stringValue;
+        _title = dictionary[@"title"];
+    }
+    return self;
+}
+
+- (NSDictionary *)toDictionary {
+    return @{ @"id": self.postId, @"title": self.title };
+}
+
 @end

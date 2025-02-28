@@ -6,7 +6,7 @@
 //
 
 #import "ListCell.h"
-
+#import "Post.h"
 
 @interface ListCell()
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
@@ -16,9 +16,15 @@
 
 @implementation ListCell
 
--(instancetype)bindModel:(Post*) post {
+-(void)bindModel:(Post *)post; {
     [_idLabel setText:post.postId];
     [_titleLabel setText:post.title];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self prepareForReuse];
+    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
 }
 
 @end
